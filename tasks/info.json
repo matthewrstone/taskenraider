@@ -1,0 +1,11 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "A short description of this task",
+  "parameters": {
+  },
+  "implementations": [
+    {"name": "info.sh", "requirements": ["shell"]},
+    {"name": "info.ps1", "requirements": ["powershell"]}
+  ]
+}

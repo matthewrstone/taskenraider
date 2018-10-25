@@ -2,9 +2,10 @@
 $data            = [Console]::In.ReadLine() | ConvertFrom-Json
 $action          = $data.action
 $group           = $data.group
-$members         = $data.members.Split()
+$members         = $data.members.Split(',')
 $groupObject     = Get-ADGroup -Filter { Name -eq $group }
 
+Write-Output $data
 function AddAdGroupMember(){
     foreach ($member in $members) { 
         Write-Output "Adding ${member}..."
