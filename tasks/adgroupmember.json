@@ -1,0 +1,20 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "input_method": "stdin",
+  "description": "A short description of this task",
+  "parameters": {
+    "action": {
+      "type": "Enum['add','remove','get']",
+      "description": "Add, remove or get group members."
+    },
+    "group": {
+      "type": "String",
+      "description": "The name of the group"
+    },
+    "members": {
+      "type": "Optional[String]",
+      "description": "Array of members to add."
+    }
+  }
+}

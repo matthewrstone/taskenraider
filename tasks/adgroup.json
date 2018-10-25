@@ -1,0 +1,23 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "A short description of this task",
+  "parameters": {
+    "action": {
+      "type": "Enum['add','remove','get']",
+      "description": "Add, Remove or Get AD Group."
+    },
+    "group": {
+      "type": "String",
+      "description": "The name of the group"
+    },
+    "category": {
+      "type": "Optional[Enum['Distribution', 'Security']]",
+      "description": "Distribution or Security group. Required for Add action."
+    },
+    "scope": {
+      "type": "Optional[Enum['Global', 'DomainLocal' , 'Universal']]",
+      "description": "Scope of the group. Global, DomainLocal, Universal. Required for Add action."
+    }
+  }
+}
